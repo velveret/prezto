@@ -11,3 +11,25 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# aliases
+alias ffind='find . -iname'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gf='git fetch -p'
+alias gfu='git fetch -p upstream'
+alias rmq='rabbitmq-server'
+alias rds='redis-server /usr/local/etc/redis.conf'
+alias stagingconsole='heroku run rails c --app upstart-staging-1'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# set editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
